@@ -6,8 +6,9 @@ import { Routre, Redirect } from 'react-router-dom';
 const UserRoute = ({ isAuthenticated, component: Component, ...rest }) => {
   <Route
     {...rest}
-    render={props => !isAuthenticated ?
-      <Component {...props} /> : <Redirect to='/dashboard'}
+    render={props => !isAuthenticated ? (
+      <Component {...props} /> ) : (
+      <Redirect to='/dashboard' /> )}
   />
 };
 

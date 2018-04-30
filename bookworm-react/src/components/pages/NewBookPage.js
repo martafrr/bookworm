@@ -1,4 +1,6 @@
 import React from 'react';
+import { Segment } from 'semantic-ui-react';
+import SearchBookForm from '../forms/SearchBookForm';
 
 class NewBookPage extends React.Component {
   state = {

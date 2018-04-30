@@ -12,7 +12,7 @@ class SignupPage extends React.Component {
     return (
       <div>
         <SignupForm submit={this.submit} />
-      </div>;
+      </div>
     )
   }
 }

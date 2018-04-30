@@ -27,4 +27,4 @@ function mapStateToProps(state) {
   }
 }
 
-extends default connect(mapStateToProps)(DashboardPage);
+export default connect(mapStateToProps)(DashboardPage);

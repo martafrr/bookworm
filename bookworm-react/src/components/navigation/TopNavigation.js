@@ -17,7 +17,7 @@ const TopNavigation = ({ user, logout }) => {
           <Dropdown.Item onClick={() => logout()} >
             Logout
           </Dropdown.Item>
-        <Dropdown.Menu>
+        </Dropdown.Menu>
       </Dropdown>
     </Menu.Menu>
   </Menu>

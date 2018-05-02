@@ -5,13 +5,13 @@ import ConfirmEmailMessage from '../messages/ConfirmEmailMessage';
 import { allBooksSelector } from '../../reducers/books';
 import AddBookCta from '../ctas/AddBookCta';
 
-const DashboardPage = ({ isConformed, books }) => {
+const DashboardPage = ({ isConformed, books }) => (
   <div>
     {!isConformed && <ConfirmEmailMessage />}
 
     {books.length === 0 && <AddBookCta />}
   </div>
-};
+);
 
 DashboardPage.propTypes = {
   isConformed: PropTypes.bool.isRequired,

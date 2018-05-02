@@ -20,8 +20,8 @@ class ResetPasswordPage extends React.Component {
 
   submit = data =>
     this.props
-      .ResetPasswordPage(data)
-      .then(() => this.props.history.pus('/login'));
+      .resetPassword(data)
+      .then(() => this.props.history.push('/login'));
 
   render() {
     const { loading, success } = this.state;

@@ -26,7 +26,7 @@ class ResetPasswordForm extends React.Component {
     this.setState({ errors });
     if (Object.keys(errors).length === 0) {
       this.setState({ loading: true });
-      this.propTypes
+      this.props
         .submit(this.state.data)
         .catch( err =>
           this.setState({ errors: err.response.data.errors, loading: false })

@@ -26,9 +26,7 @@ if (localStorage.bookwormJWT) {
   };
   store.dispatch(userLoggedIn(user));
 }
-// eslint-disable-next-line
 ReactDOM.render(
-  // eslint-disable-next-line
   <BrowserRouter>
     <Provider store={store}>
       <Route component={App} />

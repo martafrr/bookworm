@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import LoginForm from '../forms/LoginForm';
 import { login } from '../../actions/auth';
+
 class LoginPage extends React.Component {
   submit = (data) =>
-    this.props.login(data).then(() => this.props.hstory.push('/dashboard'));
+    this.props.login(data).then(() => this.props.history.push('/dashboard'));
 
   render() {
     return (

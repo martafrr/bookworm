@@ -30,7 +30,6 @@ class ForgotPasswordPage extends React.Component {
 
 ForgotPasswordPage.propTypes = {
   resetPasswordRequest: PropTypes.func.isRequired,
-  submit: PropTypes.func.isRequired
 }
 
 export default connect(null, {resetPasswordRequest})(ForgotPasswordPage);

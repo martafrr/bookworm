@@ -54,7 +54,7 @@ class SignupForm extends React.Component {
             value={data.email}
             onChange={this.onChange}
           />
-          {erros.mail && <InlineError text={erros.email} /> }
+          {errors.mail && <InlineError text={errors.email} /> }
         </Form.Field>
 
         <Form.Field error={!!errors.password}>
@@ -66,7 +66,7 @@ class SignupForm extends React.Component {
             value={data.password}
             onChange={this.onChange}
           />
-          {erros.password && <InlineError text={erros.password} /> }
+          {errors.password && <InlineError text={errors.password} /> }
         </Form.Field>
 
         <Button primary>Sign Up</Button>

@@ -4,7 +4,7 @@ import { Form, Button, Message } from 'semantic-ui-react';
 import isEmail from 'validator/lib/isEmail';
 import InlineError from '../messages/InlineError';
 
-class ForgotPassworForm extends React.Component {
+class ForgotPasswordForm extends React.Component {
   state = {
     data: {
       email: ''
@@ -46,7 +46,7 @@ class ForgotPassworForm extends React.Component {
     const { errors, data, loading } = this.state;
     return (
       <Form onSubmit={this.onSubmit} loading={loading}>
-        {!!erros.global && <Mesage negative>{errors.global}</Mesage>}
+        {!!errors.global && <Message negative>{errors.global}</Message>}
         <Form.Field error={!!errors.email}>
           <label htmlFor="email">Email</label>
           <input
@@ -65,8 +65,8 @@ class ForgotPassworForm extends React.Component {
   }
 }
 
-ForgotPassworForm.propTypes = {
+ForgotPasswordForm.propTypes = {
   submit: PropTypes.func.isRequired
 };
 
-export default ForgotPassworForm;
+export default ForgotPasswordForm;

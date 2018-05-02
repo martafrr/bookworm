@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'ract-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'reduc-thunk';
+import thunk from 'redux-thunk';
 import decode from 'jwt-decode';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './App';
@@ -12,7 +12,7 @@ import registerServiceWorker from './registerServiceWorker';
 import rootReducer from './rootReducer'
 import { userLoggedIn } from './actions/auth';
 
-const store = createStrore(
+const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );
@@ -26,14 +26,14 @@ if (localStorage.bookwormJWT) {
   };
   store.dispatch(userLoggedIn(user));
 }
-
+// eslint-disable-next-line
 ReactDOM.render(
+  // eslint-disable-next-line
   <BrowserRouter>
     <Provider store={store}>
       <Route component={App} />
     </Provider>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
 registerServiceWorker();

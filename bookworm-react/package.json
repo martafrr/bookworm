@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "gravatar-url": "^2.0.0",
     "jwt-decode": "^2.2.0",
     "normalizer": "^1.2.7",

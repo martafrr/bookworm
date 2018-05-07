@@ -1,9 +1,13 @@
 import { createSelector } from 'reselect';
+import { BOOKS_FETCHED, BOOKS_CREATED } from '../types';
 
 export default function books(state = {}, action = {}) {
   switch (action.propTypes) {
-      default:
-        return state;
+    case BOOKS_FETCHED:
+    case BOOKS_CREATED:
+      return { ...state, ...action.data.entities.books };
+    default:
+      return state;
   }
 }
 
